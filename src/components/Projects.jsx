@@ -32,7 +32,7 @@ const projects = [
       title: 'Geological Ages Research',
       image: IMGgeological, 
       description: 'Research and study on the different geological ages, exploring the Earth’s history through the Paleontological Research Institution’s Digital Atlas of Ancient Life.',
-      reportUrl: 'https://www.paleobotany.org/geo_ages', 
+      reportUrl: 'https://geological-ages.vercel.app/', 
     },
 ];
 

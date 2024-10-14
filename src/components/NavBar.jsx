@@ -13,7 +13,7 @@ const NavBar = () => {
 
   return (
     <div className="fixed top-0 left-0 w-full flex justify-center z-10 mt-4">
-      <div className="w-4/5 md:w-3/5 lg:w-3/5 h-16 bg-gray-900 bg-opacity-75 text-gray-200 flex items-center px-4 rounded-full shadow-lg">
+      <div className="w-full sm:w-4/5 md:w-3/5 h-16 bg-gray-900 bg-opacity-75 text-gray-200 flex items-center px-4 rounded-full shadow-lg">
         <div className="flex items-center space-x-2 mr-auto">
           <img
             src={IMGYAFE}
@@ -26,10 +26,10 @@ const NavBar = () => {
         </div>
 
         {/* Mobile menu button */}
-        <div className="md:hidden">
+        <div className="md:hidden mr-4">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="focus:outline-none"
+            className="focus:outline-none text-gray-200"
           >
             <svg
               className="w-6 h-6"
@@ -61,7 +61,7 @@ const NavBar = () => {
         <ul
           className={`${
             isOpen ? "flex" : "hidden"
-          } md:flex md:space-x-10 space-y-2 md:space-y-0 absolute md:static top-16 left-0 w-full bg-gray-900 md:bg-transparent rounded-b-md md:rounded-none flex-col md:flex-row items-center justify-center`}
+          } md:flex md:space-x-10 space-y-2 md:space-y-0 absolute md:static top-16 left-0 w-full bg-gray-900 md:bg-transparent rounded-b-md md:rounded-none flex-col md:flex-row items-center justify-center transition-all duration-300 ease-in-out`}
         >
           {MenuList.map(({ id, link, name }) => (
             <li
@@ -83,7 +83,7 @@ const NavBar = () => {
         </ul>
 
         {/* Download CV Button */}
-        <div className="mr-4 flex-shrink-0">
+        <div className="hidden md:block mr-4 flex-shrink-0">
           <a href="/cv_yaflman_-.pdf" download className="inline-block">
             <button className="bg-gray-700 hover:bg-gray-500 text-gray-200 font-semibold py-1 px-3 rounded-lg">
               Download CV

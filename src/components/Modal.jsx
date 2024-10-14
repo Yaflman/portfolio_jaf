@@ -41,7 +41,7 @@ const Modal = ({ isOpen, onClose, project }) => {
         <p className="text-gray-400 mb-4">{project.description}</p>
         
         {/* Download Report Button */}
-        {project.reportUrl && (
+        {project.reportUrl && project.reportUrl.endsWith('.pdf') && (
           <a
             href={project.reportUrl}
             download
@@ -51,10 +51,10 @@ const Modal = ({ isOpen, onClose, project }) => {
           </a>
         )}
 
-        {/* Visit Website Button */}
-        {project.title === 'Geological Ages Research' && (
+        {/* Visit Website Button for External Links */}
+        {project.reportUrl && project.reportUrl.startsWith('http') && (
           <a
-            href="http://example.com" // Replace with the actual URL for the geological project
+            href={project.reportUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg"
