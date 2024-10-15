@@ -18,7 +18,7 @@ const projects = [
       title: 'E-commerce Website',
       image: IMGecom,
       description: 'Creation and Deployment of an eCommerce Web Application: Implemented RESTful web services to enable efficient communication between frontend and backend. Rapid and automatic deployment of the application using Vercel PaaS platform.',
-      reportUrl: null,  
+      reportUrl: 'https://react-ecom-murex.vercel.app/',  
     },
     {
       id: 3,
