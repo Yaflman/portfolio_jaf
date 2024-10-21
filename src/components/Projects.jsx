@@ -53,16 +53,16 @@ const Projects = () => {
   return (
     <div className="min-h-screen w-full bg-transparent text-white pt-20 pb-10">
       <div className="max-w-screen-lg mx-auto py-16 px-4">
-        <h2 className="text-4xl sm:text-7xl font-bold text-white mb-12">My Projects</h2>
+        <h2 className="text-4xl sm:text-7xl font-bold text-teal-300 mb-12 text-center">My Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map(({ id, title, image, description, reportUrl }) => (
             <div
               key={id}
-              className="bg-gray-900 p-4 rounded-lg shadow-lg cursor-pointer transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+              className="bg-gradient-to-r from-gray-700 to-gray-900 p-4 rounded-lg shadow-lg cursor-pointer transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
               onClick={() => openModal({ id, title, image, description, reportUrl })}
             >
               <img src={image} alt={title} className="w-full h-48 object-cover rounded-lg mb-4" />
-              <h3 className="text-xl md:text-2xl font-semibold mb-2">{title}</h3>
+              <h3 className="text-xl md:text-2xl font-semibold text-teal-300 mb-2">{title}</h3>
               <p className="text-gray-400 text-sm md:text-base">{description}</p>
             </div>
           ))}
@@ -77,6 +77,6 @@ const Projects = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Projects;

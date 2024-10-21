@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import NavBar from './components/NavBar';
 import About from './components/About';
-import Experience from './components/Experiences';
+import Experience from './components/Experience';
 import Projects from './components/Projects';
 import { Element } from 'react-scroll';
 
