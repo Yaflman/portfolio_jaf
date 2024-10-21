@@ -58,8 +58,8 @@ const experiences = [
 const ExperienceCard = ({ experience }) => {
     return (
       <VerticalTimelineElement
-        contentStyle={{ background: "linear-gradient(135deg, #f5f7fa, #c3cfe2)", color: "#000" }} // Soft blue gradient background
-        contentArrowStyle={{ borderRight: "7px solid #c3cfe2" }} // Matching arrow with gradient
+        contentStyle={{ background: "linear-gradient(135deg, #000000, #808080, #FFFFFF)", color: "#fff" }} // Black to gray to white gradient background
+        contentArrowStyle={{ borderRight: "7px solid #808080" }} // Matching arrow with gradient
         iconStyle={{ background: "#00adb5", color: "#fff" }} // Teal background for icon
         icon={
           <div className="flex justify-center items-center w-full h-full">
@@ -74,19 +74,19 @@ const ExperienceCard = ({ experience }) => {
       >
         <div>
           <h4 className="text-[#00adb5] text-[24px] font-bold">{experience.year}</h4> {/* Teal text for year */}
-          <h3 className="text-black text-[24px] font-bold">
+          <h3 className="text-white text-[24px] font-bold">
             {experience.title}
           </h3>
-          <p className="text-gray-700 text-[16px] font-semibold" style={{ margin: 0 }}>
+          <p className="text-gray-300 text-[16px] font-semibold" style={{ margin: 0 }}>
             {experience.company}
           </p>
         </div>
-        <p className="mt-3 text-gray-600">{experience.description}</p>
+        <p className="mt-3 text-gray-200">{experience.description}</p>
         <ul className="mt-5 list-disc ml-5 space-y-2">
           {experience.technologies.map((tech, index) => (
             <li
               key={`experience-tech-${index}`}
-              className="text-[#00adb5] text-[14px] pl-1 tracking-wider" // Accent color for technologies
+              className="text-black text-[14px] pl-1 tracking-wider" // Changed to black for technologies
             >
               {tech}
             </li>
@@ -94,9 +94,7 @@ const ExperienceCard = ({ experience }) => {
         </ul>
       </VerticalTimelineElement>
     );
-  };
-  
-  
+};
 
 // Main Experience component to display the list of experiences
 const Experience = () => {
